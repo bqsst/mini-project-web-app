@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Edit Culture</title>
+   <link rel="stylesheet" type="text/css" href="/style.css">
+   <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+   <div class="manage-page">
+      <div class="w-auto p-6 rounded-md border shadow">
+         <h1 class="text-head">Edit Culture</h1>
+         <form action="/detail/update/<%= detail.detail_id %>" method="POST" class="form w-full" enctype="multipart/form-data">
+            <label>Picture:</label>
+            <input class="input" type="file" name="image" id="image" value="<%= detail.image_path %>" accept="image/*">
+            <label>Local Name:</label>
+            <input class="input" type="text" name="local_name" value="<%= detail.local_name %>" required>
+            <label>Address:</label>
+            <input class="input" type="text" name="address" value="<%= detail.address %>" required>
+            <label>History:</label>
+            <input class="input" type="text" name="history" value="<%= detail.history %>" required>
+            <label>Phone</label>
+            <input class="input" type="text" name="phone_number" value="<%= detail.phone_number %>" required>
+            <button class="button" type="submit">Update Customer</button>
+         </form>
+         <button class="button-cencel mt-2" onclick="window.location.href='/detail'">Cancel</button>
+      </div>
+   </div>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title>Add Culture</title>
+   <link rel="stylesheet" type="text/css" href="/style.css">
+   <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+   <div class="manage-page">
+      <div class="w-1/4 p-6 rounded-md border shadow">
+         <h1 class="text-head">Add Culture</h1>
+         <form action="/detail/add" method="POST" enctype="multipart/form-data" class="form w-full">
+            <label>Picture:</label>
+            <input class="input" type="file" name="image" id="image" accept="image/*">
+            <label>Local Name:</label>
+            <input class="input" type="text" name="local_name" placeholder="Local Name" required>
+            <label>Address:</label>
+            <input class="input" type="text" name="address" placeholder="Address" required>
+            <label>History:</label>
+            <input class="input" type="text" name="history" placeholder="History" required>
+            <label>Phone:</label>
+            <input class="input" type="text" name="phone_number" placeholder="Phone" required>
+            <button class="button" type="submit">Add Culture</button>
+            <button class="button-cencel mt-[-6px]" onclick="window.location.href='/detail'">Cancel</button>
+         </form>
+      </div>
+   </div>
+</body>
+
+</html>
